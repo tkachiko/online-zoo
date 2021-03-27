@@ -1,6 +1,8 @@
 @font-face {
   font-family: 'Roboto';
   src: url(/fonts/Roboto/Roboto-Regular.ttf);
+  font-family: 'SceneW01-Black';
+  src: url(/fonts/SceneW01-Black.ttf);
 }
 html {
   box-sizing: border-box;
@@ -74,9 +76,11 @@ html {
   width: 100%;
 }
 .watch-your-favourite-animal__text {
+  font-family: 'SceneW01-Black', sans-serif;
   font-weight: 900;
   font-size: 70px;
   line-height: 120%;
+  letter-spacing: 0.03em;
 }
 .watch-your-favourite-animal__button {
   margin-top: 50px;
@@ -84,7 +88,7 @@ html {
 .button {
   background-color: #70cb0e;
   -webkit-transition: width 1s, height 1s, background-color 1s, -webkit-transform 1s;
-    transition: width 1s, height 1s, background-color 1s, transform 1s;
+  transition: width 1s, height 1s, background-color 1s, transform 1s;
   border-radius: 30px;
   border: none;
   cursor: pointer;
@@ -94,13 +98,11 @@ html {
   background-color: #74d40d;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-
 }
 .button:active {
   background: #5eac0b;
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
- 
 }
 .button--play {
   display: block;
