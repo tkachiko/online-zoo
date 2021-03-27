@@ -62,4 +62,50 @@ html {
   pointer-events: none;
   text-shadow: #70cb0e 0 0 2px, #70cb0e 0 0 2px, #70cb0e 0 0 2px, #70cb0e 0 0 2px;
 }
+.hero {
+  background-image: url(/assets/images/hero/hero.png), radial-gradient(71.89% 152.21% at 40.1% 50%, #b5e6ff 0%, #59c3fb 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.watch-your-favourite-animal {
+  padding-top: 210px;
+  padding-bottom: 137px;
+  max-width: 570px;
+  width: 100%;
+}
+.watch-your-favourite-animal__text {
+  font-weight: 900;
+  font-size: 70px;
+  line-height: 120%;
+}
+.watch-your-favourite-animal__button {
+  margin-top: 50px;
+}
+.button {
+  background-color: #70cb0e;
+  -webkit-transition: width 1s, height 1s, background-color 1s, -webkit-transform 1s;
+    transition: width 1s, height 1s, background-color 1s, transform 1s;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #74d40d;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 
+}
+.button:active {
+  background: #5eac0b;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+ 
+}
+.button--play {
+  display: block;
+  padding-top: 15px;
+  text-align: center;
+  width: 233px;
+  height: 51px;
+}
