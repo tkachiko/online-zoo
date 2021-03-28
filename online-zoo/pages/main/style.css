@@ -245,7 +245,7 @@ html {
   margin-top: 30px;
   padding-bottom: 100px;
 }
-.choose-your-animal__button {
+.choose-your-favourite__button {
   width: 286px;
   height: 51px;
   padding: 15px;
@@ -278,4 +278,64 @@ html {
   width: 100%;
   margin-top: -43px;
   text-align: center;
+}
+.testimonials {
+  margin-top: 100px;
+}
+.testimonials__slider-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 80px;
+  max-width: 1160px;
+  padding-bottom: 50px;
+}
+.testimonials__slider__card-wrapper {
+  max-width: 233px;
+  height: 369px;
+  display: flex;
+}
+.testimonials__slider__card {
+  width: 100%;
+  background-color: #a7e1ff;
+  padding-top: 22px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.testimonials__caption {
+  display: inline-block;
+  width: 109px;
+  height: 37px;
+  padding-left: 8px;
+  vertical-align: super;
+  letter-spacing: -1px;
+}
+.person-image {
+  border-radius: 50%;
+}
+.person-name {
+  width: 130px;
+  font-weight: 550;
+  font-size: 16px;
+  line-height: 19px;
+}
+.person-donation::before {
+  content: url(/assets/icons/pay/money.svg);
+}
+.person-donation {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 19px;
+}
+.card-text {
+  padding-top: 18px;
+  font-size: 16px;
+  line-height: 19px;
+}
+.leave-feedback__button {
+  margin: 0 auto;
+  width: 246px;
+  height: 51px;
+  padding: 15px;
+  margin-bottom: 100px;
 }
