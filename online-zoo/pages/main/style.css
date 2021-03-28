@@ -111,9 +111,7 @@ html {
   transform: scale(0.9);
 }
 .button--play {
-  /* display: block  ; */
   padding-top: 15px;
-  /* text-align: center; */
   width: 233px;
   height: 51px;
 }
@@ -244,8 +242,8 @@ html {
   line-height: 19px;
 }
 .pets-in-zoo__button {
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin-top: 30px;
+  padding-bottom: 100px;
 }
 .choose-your-animal__button {
   width: 286px;
@@ -253,4 +251,31 @@ html {
   padding: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+.pay-and-feed {
+  margin-top: 100px;
+}
+.pay-and-feed__container {
+  margin: 0 auto;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1051px;
+  width: 100%;
+  padding-bottom: 97px;
+}
+.pay-and-feed__icon {
+  padding-left: 40px;
+}
+.pay-and-feed__arrow {
+  position: absolute;
+  transform: matrix(1, 0, 0, 1, 240, -195);
+}
+.icon__caption {
+  line-height: 19px;
+  font-size: 16px;
+  max-width: 312px;
+  width: 100%;
+  margin-top: -43px;
+  text-align: center;
 }
