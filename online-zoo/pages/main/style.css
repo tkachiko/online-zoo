@@ -213,15 +213,20 @@ html {
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
 }
+.pets-in-zoo__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
 .pets-in-zoo__card-wrapper {
   position: relative;
   overflow: hidden;
   transform: scale(0.9);
 }
-.pets-in-zoo__cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+.pets-in-zoo__card-wrapper:hover {
+  transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+  -webkit-transition: width 1s, height 1s, background-color 1s, -webkit-transform 1s;
+  transition: width 1s, height 1s, background-color 1s, transform 1s;
 }
 .pets-in-zoo__card {
   text-align: center;
