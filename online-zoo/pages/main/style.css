@@ -60,6 +60,10 @@ html {
 .menu__link {
   text-decoration: none;
 }
+.menu__link:hover {
+  border-bottom-style: outset;
+  border-color: #70cb0e;
+}
 .menu__link--active {
   pointer-events: none;
   text-shadow: #70cb0e 0 0 2px, #70cb0e 0 0 2px, #70cb0e 0 0 2px, #70cb0e 0 0 2px;
