@@ -115,3 +115,69 @@ html {
   width: 233px;
   height: 51px;
 }
+.how-it-works {
+  margin-top: 100px;
+}
+.heading {
+  text-align: center;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.6px;
+}
+.heading::first-letter {
+  text-transform: capitalize;
+}
+.how-it-works__container {
+  margin: 0 auto;
+  max-width: 1365px;
+  width: 100%;
+}
+.pets-images {
+  display: flex;
+  list-style: none;
+  margin-top: 29px;
+  padding-bottom: 48px;
+  align-items: center;
+  background-image: url(/assets/images/pets-parallax/background.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.pets-images__image {
+  display: flex;
+  padding-top: 51px;
+}
+.pets-images__image--eagle {
+  z-index: 0;
+  transform: matrix(0.8, 0, 0, 0.8, -40, 0);
+}
+.pets-images__image--tiger {
+  z-index: 1;
+  transform: matrix(0.9, 0, 0, 0.9, -142, 0);
+}
+.pets-images__image--panda {
+  z-index: 2;
+  transform: matrix(1, 0, 0, 1, -195, 0);
+}
+.pets-images__image--monkey {
+  z-index: 1;
+  transform: matrix(0.9, 0, 0, 0.9, -250, 0);
+}
+.pets-images__image--elephant {
+  z-index: 0;
+  transform: matrix(0.8, 0, 0, 0.8, -350, 0);
+}
+.pets-images__article {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 32px;
+  max-width: 933px;
+  width: 100%;
+}
+.pets-images__text {
+  font-size: 16px;
+  line-height: 140%;
+}
+.coupons__text {
+  padding-bottom: 30px;
+  color: #418CE2;
+}
