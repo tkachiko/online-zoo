@@ -97,6 +97,8 @@ html {
   border: none;
   cursor: pointer;
   text-decoration: none;
+  display: block;
+  text-align: center;
 }
 .button:hover {
   background-color: #74d40d;
@@ -109,9 +111,9 @@ html {
   transform: scale(0.9);
 }
 .button--play {
-  display: block;
+  /* display: block  ; */
   padding-top: 15px;
-  text-align: center;
+  /* text-align: center; */
   width: 233px;
   height: 51px;
 }
@@ -176,8 +178,74 @@ html {
 .pets-images__text {
   font-size: 16px;
   line-height: 140%;
+  padding-bottom: 100px;
 }
 .coupons__text {
   padding-bottom: 30px;
-  color: #418CE2;
+  color: #418ce2;
+}
+.pets-in-zoo {
+  margin-top: 100px;
+}
+.pets-in-zoo__slider-box {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 60px;
+  max-width: 1160px;
+  width: 100%;
+}
+.arrow {
+  border: none;
+  background-color: transparent;
+  align-self: center;
+  width: 64px;
+  outline: none;
+  cursor: pointer;
+}
+.arrow-left:hover,
+.arrow-right:hover {
+  opacity: 70%;
+}
+.arrow-left:active,
+.arrow-right:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.pets-in-zoo__card-wrapper {
+  position: relative;
+  overflow: hidden;
+  transform: scale(0.9);
+}
+.pets-in-zoo__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.pets-in-zoo__card {
+  text-align: center;
+  text-decoration: none;
+}
+.card__caption {
+  position: absolute;
+  text-align: center;
+  top: 15px;
+  width: 100%;
+}
+.card-name {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19px;
+}
+.pets-in-zoo__button {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.choose-your-animal__button {
+  width: 286px;
+  height: 51px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
