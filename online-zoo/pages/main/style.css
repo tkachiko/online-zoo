@@ -339,3 +339,73 @@ html {
   padding: 15px;
   margin-bottom: 100px;
 }
+.footer {
+  min-height: 270px;
+  height: 100%;
+  background-color: #dff5b0;
+}
+.footer-wrapper {
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+}
+.footer-background {
+  max-width: 1920px;
+  position: absolute;
+  z-index: -1;
+  transform: matrix(1, 0, 0, 1, -370, -70);
+}
+.footer-links {
+  padding-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.footer-links__logo-button {
+  display: flex;
+  justify-content: space-between;
+  max-width: 430px;
+  width: 100%;
+}
+.footer-logo {
+  transform: matrix(0.85, 0, 0, 0.85, -9, -15);
+}
+.button--donate {
+  width: 230px;
+  padding: 15px;
+}
+.footer-menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 15px;
+  grid-column-gap: 80px;
+}
+.footer-menu-item {
+}
+.socials {
+  max-width: 190px;
+  width: 100%;
+}
+.social {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-credentials {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+.schools-logo {
+  display: flex;
+  justify-content: space-between;
+  max-width: 295px;
+  width: 100%;
+}
+.footer-copyright{
+  display: flex;
+  justify-content: space-between;
+  max-width: 790px;
+  width: 100%;
+  align-self: flex-end;
+}
