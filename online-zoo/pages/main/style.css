@@ -19,11 +19,15 @@ html {
   font-size: 18px;
   line-height: 21px;
 }
+
+/* Hero background */
 .hero {
   background-image: url(/assets/images/hero/hero.png), radial-gradient(71.89% 152.21% at 40.1% 50%, #b5e6ff 0%, #59c3fb 100%);
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* Header */
 .header {
   position: absolute;
   width: 100%;
@@ -44,7 +48,7 @@ html {
   width: 100%;
   padding-top: 12px;
 }
-.navigation {
+.nav {
   max-width: 410px;
   width: 100%;
   align-self: center;
@@ -70,6 +74,8 @@ html {
   pointer-events: none;
   text-shadow: #70cb0e 0 0 2px, #70cb0e 0 0 2px, #70cb0e 0 0 2px, #70cb0e 0 0 2px;
 }
+
+/* Watch you favourite animal block */
 .watch-your-favourite-animal__content {
   width: 570px;
     padding-top: 210px;
@@ -98,9 +104,7 @@ html {
   padding: 15px;
 }
 .button:hover {
-  background-color: #74d40d;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+ opacity: 80%;
 }
 .button:active {
   background: #5eac0b;
@@ -112,6 +116,8 @@ html {
   width: 233px;
   height: 51px;
 }
+
+/* How it works block */
 .heading {
   text-align: center;
   font-size: 40px;
@@ -175,6 +181,8 @@ html {
   padding-bottom: 30px;
   color: #418ce2;
 }
+
+/* Pets in zoo block */
 .slider-box__wrapper {
 padding-top: 60px;
 }
@@ -240,6 +248,8 @@ padding-top: 60px;
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Pay and feed block */
 .pay-and-feed__icons {
   margin: 0 auto;
   padding-top: 80px;
@@ -261,6 +271,8 @@ padding-top: 60px;
   margin-top: -43px;
   text-align: center;
 }
+
+/* Testimonials block */
 .feedback-slider-box_wrapper {
 padding-top: 80px;
 margin-bottom: 125px;
@@ -321,6 +333,8 @@ margin-bottom: 125px;
   width: 246px;
   height: 51px;
 }
+
+/* Footer */
 .footer {
   position: relative;
   height: 270px;
@@ -381,10 +395,15 @@ margin-bottom: 125px;
   max-width: 295px;
   width: 100%;
 }
+.rss-logo,
+.yd-logo {
+  cursor: default;
+}
 .footer-copyright{
   display: flex;
   justify-content: space-between;
   max-width: 790px;
   width: 100%;
   align-self: flex-end;
+  cursor: default;
 }

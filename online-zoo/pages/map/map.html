@@ -1,150 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/pages/map/map.css">
-  <title>Online Zoo</title>
-</head>
-<body>
-  <header class="header">
-    <div class="heading--hidden">
-      <h1>online zoo</h1>
-    </div>
-    <div class="container">
-      <div class="header__content">
-        <div class="logo">
-          <a href="#">
-            <img class="logo" src="/assets/icons/logo/zoo-logo.svg" alt="zoo-logo" />
-          </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="map.css" />
+    <title>Online Zoo</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="heading--hidden">
+          <h1>online zoo</h1>
         </div>
-        <nav class="navigation">
-          <ul class="menu">
-            <li class="menu__item">
-              <a class="menu__link" href="/pages/main/index.html">about</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link menu__link--active" href="/pages/map/map.html">map</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="/pages/zoos/zoos.html">zoos</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="/pages/404/404-not-found.html">contact us</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="https://www.figma.com/file/aBvQMVmI665DtzprpiniuH/online-zoo" target="blank">design</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
-  <main class="main">
-    <div class="map-container">
-      <div class="map">
-        <img class="map-img" src="/assets/images/map/map.svg" alt="" />
-        <div class="map__pet map__pet--eagle">
-          <div class="map__icon-container map__icon-container--eagle">
-            <a class="map__link map__link--eagle" href="/pages/zoos/eagle/eagle.html">
-              <img class="map__icon map__icon--eagle" src="/assets/icons/pets/eagle.jpg" alt="eagle">
-            </a>
-          </div>
-          <div class="map__mark map__mark--eagle"></div>
-          <div class="map__tooltip map__tooltip--eagle"></div>
-          <div class="map__pet-name map__pet-name--eagle">eagle</div>
-        </div>
-        <div class="map__pet map__pet--alligator">
-          <div class="map__icon-container map__icon-container--alligator icon-active">
-            <a class="map__link map__link--alligator" href="/pages/zoos/eagle/alligator.html">
-              <img class="map__icon map__icon--alligator" src="/assets/icons/pets/alligator.jpg" alt="alligator">
-            </a>
-          </div>
-          <div class="map__mark map__mark--alligator"></div>
-          <div class="map__tooltip map__tooltip--alligator"></div>
-          <div class="map__pet-name map__pet-name--alligator">alligator</div>
-        </div>
-        <div class="map__pet map__pet--gorilla">
-          <div class="map__icon-container map__icon-container--gorilla">
-            <a class="map__link map__link--gorilla" href="/pages/zoos/eagle/gorilla.html">
-              <img class="map__icon map__icon--gorilla" src="/assets/icons/pets/gorilla.jpg" alt="gorilla">
-            </a>
-          </div>
-          <div class="map__mark map__mark--gorilla"></div>
-          <div class="map__tooltip map__tooltip--gorilla"></div>
-          <div class="map__pet-name map__pet-name--gorilla">gorilla</div>
-        </div>
-        <div class="map__pet map__pet--panda">
-          <div class="map__icon-container map__icon-container--panda">
-            <a class="map__link map__link--panda" href="/pages/zoos/eagle/panda.html">
-              <img class="map__icon map__icon--panda" src="/assets/icons/pets/panda.jpg" alt="panda">
-            </a>
-          </div>
-          <div class="map__mark map__mark--panda"></div>
-          <div class="map__tooltip map__tooltip--panda"></div>
-          <div class="map__pet-name map__pet-name--panda">panda bear</div>
-        </div>
-      </div>
-    </div>
-  </main>
-  <footer class="footer">
-    <div class="footer-background">
-      <div class="container content">
-        <div class="footer-links">
-          <a href="#">
-            <img class="logo footer-logo" src="/assets/icons/logo/zoo-logo.svg" alt="zoo-logo" />
-          </a>
-          <div class="donate__button">
-            <a class="button button--donate" href="javascript:void(0)">Donate for volunteers</a>
-          </div>
-          <div class="footer-nav-block">
-            <nav class="footer-nav">
-              <ul class="menu footer-menu">
-                <li class="menu__item footer-menu-item"><a class="menu__link" href="#">about</a></li>
-                <li class="menu__item footer-menu-item"><a class="menu__link" href="/pages/404/404-not-found.html">contact us</a></li>
-                <li class="menu__item footer-menu-item"><a class="menu__link" href="/pages/map/map.html">map</a></li>
-                <li class="menu__item footer-menu-item"><a class="menu__link" href="/pages/404/404-not-found.html">feedback</a></li>
+        <div class="container">
+          <div class="header__content">
+            <div class="logo">
+              <a href="/pages/main/index.html">
+                <img class="logo" src="/assets/icons/logo/zoo-logo.svg" alt="zoo-logo" />
+              </a>
+            </div>
+            <nav class="nav">
+              <ul class="menu">
+                <li class="menu__item">
+                  <a class="menu__link" href="/pages/main/index.html">about</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link menu__link--active" href="javascript:void(0)">map</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="/pages/zoos/zoos.html">zoos</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="/pages/404/404-not-found.html">contact us</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="https://www.figma.com/file/aBvQMVmI665DtzprpiniuH/online-zoo" target="blank">design</a>
+                </li>
               </ul>
             </nav>
           </div>
-          <address class="socials">
-            <ul class="social">
-              <li class="menu__item">
-                <a class="menu__link" href="https://www.instagram.com">
-                  <img src="/assets/icons/socials/insta.svg" alt="" />
-                </a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="https://www.facebook.com">
-                  <img src="/assets/icons/socials/facebook.svg" alt="" />
-                </a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="https://www.twitter.com">
-                  <img src="/assets/icons/socials/twitter.svg" alt="" />
-                </a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="https://youtube.com">
-                  <img src="/assets/icons/socials/youtube.svg" alt="" />
-                </a>
-              </li>
-            </ul>
-          </address>
         </div>
-        <div class="footer-credentials">
-          <div class="schools-logo">
-            <a class="rss-logo" href="javascript:void(0)" title="Rolling Scopes School"><img src="/assets/icons/logo/rss-logo.svg" alt="" /></a>
-            <a class="yd-logo" href="javascript:void(0)" title="Yem Digital"><img src="/assets/icons/logo/yd-logo.svg" alt="" /></a>
+      </header>
+      <main class="main">
+        <div class="map-container">
+          <div class="map">
+            <img class="map-img" src="/assets/images/map/map.svg" alt="" />
+            <div class="map__pet map__pet--eagle">
+              <div class="map__icon-container map__icon-container--eagle">
+                <a class="map__link map__link--eagle" href="/pages/zoos/eagle/eagle.html">
+                  <img class="map__icon map__icon--eagle" src="/assets/icons/pets/eagle.jpg" alt="eagle" />
+                </a>
+              </div>
+              <div class="map__mark map__mark--eagle"></div>
+              <div class="map__tooltip map__tooltip--eagle"></div>
+              <div class="map__pet-name map__pet-name--eagle">eagle</div>
+            </div>
+            <div class="map__pet map__pet--alligator">
+              <div class="map__icon-container map__icon-container--alligator icon-active">
+                <a class="map__link map__link--alligator" href="/pages/zoos/eagle/alligator.html">
+                  <img class="map__icon map__icon--alligator" src="/assets/icons/pets/alligator.jpg" alt="alligator" />
+                </a>
+              </div>
+              <div class="map__mark map__mark--alligator"></div>
+              <div class="map__tooltip map__tooltip--alligator"></div>
+              <div class="map__pet-name map__pet-name--alligator">alligator</div>
+            </div>
+            <div class="map__pet map__pet--gorilla">
+              <div class="map__icon-container map__icon-container--gorilla">
+                <a class="map__link map__link--gorilla" href="/pages/zoos/eagle/gorilla.html">
+                  <img class="map__icon map__icon--gorilla" src="/assets/icons/pets/gorilla.jpg" alt="gorilla" />
+                </a>
+              </div>
+              <div class="map__mark map__mark--gorilla"></div>
+              <div class="map__tooltip map__tooltip--gorilla"></div>
+              <div class="map__pet-name map__pet-name--gorilla">gorilla</div>
+            </div>
+            <div class="map__pet map__pet--panda">
+              <div class="map__icon-container map__icon-container--panda">
+                <a class="map__link map__link--panda" href="/pages/zoos/eagle/panda.html">
+                  <img class="map__icon map__icon--panda" src="/assets/icons/pets/panda.jpg" alt="panda" />
+                </a>
+              </div>
+              <div class="map__mark map__mark--panda"></div>
+              <div class="map__tooltip map__tooltip--panda"></div>
+              <div class="map__pet-name map__pet-name--panda">panda bear</div>
+            </div>
           </div>
-          <div class="footer-copyright">
-            <div class="copyright">Copyright ©RSSchool and ©Yem Digital 2020 - 2021</div>
-            <div class="designer">Grigoreva Margarita</div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="footer-background">
+        <div class="container content">
+          <div class="footer-links">
+            <a href="#">
+              <img class="logo footer-logo" src="/assets/icons/logo/zoo-logo.svg" alt="zoo-logo" />
+            </a>
+            <div class="donate__button">
+              <a class="button button--donate" href="javascript:void(0)">Donate for volunteers</a>
+            </div>
+            <div class="footer-nav-block">
+              <nav class="footer-nav">
+                <ul class="menu footer-menu">
+                  <li class="menu__item footer-menu-item">
+                    <a class="menu__link" href="/pages/main/index.html">about</a>
+                  </li>
+                  <li class="menu__item footer-menu-item">
+                    <a class="menu__link" href="/pages/404/404-not-found.html">contact us</a>
+                  </li>
+                  <li class="menu__item footer-menu-item">
+                    <a class="menu__link" href="/pages/map/map.html">map</a>
+                  </li>
+                  <li class="menu__item footer-menu-item">
+                    <a class="menu__link" href="/pages/404/404-not-found.html">feedback</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <address class="socials">
+              <ul class="social">
+                <li class="menu__item">
+                  <a class="menu__link" href="https://www.instagram.com">
+                    <img src="/assets/icons/socials/insta.svg" alt="" />
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="https://www.facebook.com">
+                    <img src="/assets/icons/socials/facebook.svg" alt="" />
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="https://www.twitter.com">
+                    <img src="/assets/icons/socials/twitter.svg" alt="" />
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="https://youtube.com">
+                    <img src="/assets/icons/socials/youtube.svg" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-credentials">
+            <div class="schools-logo">
+              <a class="rss-logo" href="javascript:void(0)" title="Rolling Scopes School">
+                <img src="/assets/icons/logo/rss-logo.svg" alt="" />
+              </a>
+              <a class="yd-logo" href="javascript:void(0)" title="Yem Digital">
+                <img src="/assets/icons/logo/yd-logo.svg" alt="" />
+              </a>
+            </div>
+            <div class="footer-copyright">
+              <div class="copyright">Copyright ©RSSchool and ©Yem Digital 2020 - 2021</div>
+              <div class="designer">Grigoreva Margarita</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
