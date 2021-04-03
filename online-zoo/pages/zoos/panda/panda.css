@@ -90,6 +90,9 @@ html {
 }
 
 /* Main content heading */
+.main {
+  padding-top: 100px;
+}
 .heading-container {
   padding-top: 5%;
 }
@@ -101,6 +104,77 @@ html {
 }
 .heading::first-letter {
   text-transform: capitalize;
+}
+
+/* Sidebar */
+.sidebar {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+.sidebar-menu {
+  background: url(/assets/images/pets-sidebar/sidebar-background.svg) center no-repeat;
+  margin-top: 10%;
+  width: 111px;
+  height: 380px;
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.sidebar-icon {
+  list-style: none;
+  position: relative;
+}
+.icon-container {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+}
+.icon-active .icon-container {
+  pointer-events: none;
+  border: 4px solid #74d40d;
+}
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  width: 102px;
+  height: 47px;
+  margin-left: 76px;
+  margin-top: -53px;
+  background-color: #74d40d;
+  text-align: center;
+  padding-top: 5px;
+}
+.tooltip-block {
+  position: relative;
+}
+.tooltip-block::before {
+  position: absolute;
+  content: '';
+  left: -15px;
+  bottom: 10px;
+  border: 7px solid transparent;
+  border-top: 10px solid #74d40d;
+  transform: rotate(90deg);
+  z-index: -1;
+}
+.tooltip-heading {
+  text-transform: uppercase;
+ 
+}
+.tooltip-location::first-letter {
+  text-transform: capitalize;
+}
+.sidebar-icon:not(.icon-active):hover .tooltip {
+  visibility: visible;
+}
+.text {
+  font-size: 16px;
+  line-height: 19px;
 }
 
 /* Animal block */
@@ -134,8 +208,6 @@ html {
   grid-gap: 20px;
   background-color: #a7e1ff;
   width: inherit;
-  font-size: 16px;
-  line-height: 19px;
   padding-top: 10px;
   padding-bottom: 11px;
 }
@@ -177,7 +249,7 @@ html {
   grid-row: 3;
   grid-column: 2;
 }
-.spoiler-summary::-webkit-details-marker {
+.spoiler-summary::marker {
   display: none;
 }
 .spoiler-summary::-moz-list-bullet {
@@ -191,8 +263,6 @@ html {
   padding-top: 20px;
   margin-left: 20px;
   padding-bottom: 20px;
-  font-size: 16px;
-  line-height: 19px;
   cursor: pointer;
   position: relative;
   text-transform: uppercase;
@@ -217,12 +287,8 @@ html {
 .spoiler-content {
   width: 470px;
   margin-left: 20px;
-  margin-top: -12px;
+  margin-top: -11px;
   padding-bottom: 3%;
-}
-.spoiler-text {
-  font-size: 16px;
-  font-weight: 400;
 }
 .spoiler-details[open] .spoiler-text {
   animation: sweep 0.5s ease-in-out;
