@@ -47,25 +47,46 @@
         <div class="map-container">
           <div class="map">
             <img class="map-img" src="/assets/images/map/map.svg" alt="" />
+            <div class="zoom">
+              <button class="zoom-out">-</button>
+              <button class="zoom-in">+</button>
+            </div>
             <div class="map__pet map__pet--eagle">
               <div class="map__icon-container map__icon-container--eagle">
                 <a class="map__link map__link--eagle" href="/pages/zoos/eagle/eagle.html">
                   <img class="map__icon map__icon--eagle" src="/assets/icons/pets/eagle.png" alt="eagle" />
                 </a>
               </div>
-              <div class="map__mark map__mark--eagle"></div>
-              <div class="map__tooltip map__tooltip--eagle"></div>
+              <span class="tooltip tooltip-eagle">
+                <div class="tooltip-block tooltip-block--left">
+                  <h6 class="tooltip-heading">eagle,</h6>
+                  <p class="tooltip-location text">california,USA</p>
+                </div>
+              </span>
               <div class="map__pet-name map__pet-name--eagle">eagle</div>
+              <div class="map__mark map__mark--eagle">
+                <img src="/assets/icons/marker/marker.svg" alt="">
+              </div>
+              <div class="map__location--usa">
+                <p>USA</p>
+              </div>
             </div>
             <div class="map__pet map__pet--alligator">
-              <div class="map__icon-container map__icon-container--alligator icon-active">
+              <div class="map__icon-container map__icon-container--alligator">
                 <a class="map__link map__link--alligator" href="/pages/zoos/alligator/alligator.html">
                   <img class="map__icon map__icon--alligator" src="/assets/icons/pets/alligator.png" alt="alligator" />
                 </a>
               </div>
-              <div class="map__mark map__mark--alligator"></div>
-              <div class="map__tooltip map__tooltip--alligator"></div>
+              <span class="tooltip tooltip-alligator">
+                <div class="tooltip-block tooltip-block--right">
+                  <h6 class="tooltip-heading">alligator,</h6>
+                  <p class="tooltip-location text">florida USA</p>
+                </div>
+              </span>
               <div class="map__pet-name map__pet-name--alligator">alligator</div>
+              <div class="map__mark map__mark--alligator">
+                <img src="/assets/icons/marker/marker.svg" alt="">
+              </div>
             </div>
             <div class="map__pet map__pet--gorilla">
               <div class="map__icon-container map__icon-container--gorilla">
@@ -73,9 +94,19 @@
                   <img class="map__icon map__icon--gorilla" src="/assets/icons/pets/gorilla.png" alt="gorilla" />
                 </a>
               </div>
-              <div class="map__mark map__mark--gorilla"></div>
-              <div class="map__tooltip map__tooltip--gorilla"></div>
+              <span class="tooltip tooltip-gorilla">
+                <div class="tooltip-block tooltip-block--right">
+                  <h6 class="tooltip-heading">gorilla,</h6>
+                  <p class="tooltip-location text">eastern DRC</p>
+                </div>
+              </span>
               <div class="map__pet-name map__pet-name--gorilla">gorilla</div>
+              <div class="map__mark map__mark--gorilla">
+                <img src="/assets/icons/marker/marker.svg" alt="">
+                <div class="map__location--drc">
+                  <p>Eastern<br>DRC</p>
+                </div>
+              </div>
             </div>
             <div class="map__pet map__pet--panda">
               <div class="map__icon-container map__icon-container--panda">
@@ -83,9 +114,19 @@
                   <img class="map__icon map__icon--panda" src="/assets/icons/pets/panda.png" alt="panda" />
                 </a>
               </div>
-              <div class="map__mark map__mark--panda"></div>
-              <div class="map__tooltip map__tooltip--panda"></div>
-              <div class="map__pet-name map__pet-name--panda">panda bear</div>
+              <span class="tooltip tooltip-panda">
+             <div class="tooltip-block tooltip-block--right">
+               <h6 class="tooltip-heading">panda,</h6>
+               <p class="tooltip-location text">china</p>
+             </div>
+           </span>
+           <div class="map__pet-name map__pet-name--panda">panda bear</div>
+           <div class="map__mark map__mark--panda">
+             <img src="/assets/icons/marker/marker.svg" alt="">
+             <div class="map__location--china">
+              <p>China</p>
+            </div>
+           </div>
             </div>
           </div>
         </div>

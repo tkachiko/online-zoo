@@ -127,6 +127,9 @@ html {
   list-style: none;
   position: relative;
 }
+.icon-container:hover {
+  border: 4px solid #74d40d;
+}
 .icon-container {
   width: 64px;
   height: 64px;
@@ -160,7 +163,6 @@ html {
   border: 7px solid transparent;
   border-top: 10px solid #74d40d;
   transform: rotate(90deg);
-  z-index: -1;
 }
 .tooltip-heading {
   text-transform: uppercase;
