@@ -166,7 +166,6 @@ html {
 }
 .tooltip-heading {
   text-transform: uppercase;
- 
 }
 .tooltip-location::first-letter {
   text-transform: capitalize;
