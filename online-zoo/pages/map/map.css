@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Roboto';
-  src: url(/fonts/Roboto/Roboto-Regular.ttf);
+  src: url(../../fonts/Roboto/Roboto-Regular.ttf);
 }
 html {
   box-sizing: border-box;
@@ -316,7 +316,7 @@ html {
   background-color: #dff5b0;
 }
 .footer-background {
-  background-image: url(/assets/images/footer/footer.png);
+  background-image: url(../../assets/images/footer/footer.png);
   position: absolute;
   height: 323px;
   width: 100%;

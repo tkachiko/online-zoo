@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'Roboto';
-  src: url(/fonts/Roboto/Roboto-Regular.ttf);
+  src: url(../../fonts/Roboto/Roboto-Regular.ttf);
   font-family: 'SceneW01-Black';
-  src: url(/fonts/SceneW01-Black.ttf);
+  src: url(../../fonts/SceneW01-Black.ttf);
 }
 html {
   box-sizing: border-box;

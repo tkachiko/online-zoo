@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Roboto';
-  src: url(/fonts/Roboto/Roboto-Regular.ttf);
+  src: url(../../../fonts/Roboto/Roboto-Regular.ttf);
 }
 html {
   box-sizing: border-box;
@@ -111,7 +111,7 @@ html {
   padding-top: 100px;
 }
 .sidebar-menu {
-  background: url(/assets/images/pets-sidebar/sidebar-background.svg) center no-repeat;
+  background: url(../../../assets/images/pets-sidebar/sidebar-background.svg) center no-repeat;
   margin-top: 190px;
   width: 111px;
   height: 380px;
@@ -270,7 +270,7 @@ html {
   top: 10%;
   left: 88.7%;
   color: transparent;
-  background: url(/assets/icons/buttons/arrow-right.svg) no-repeat 50% 50% / 45px 45px;
+  background: url(../../../assets/icons/buttons/arrow-right.svg) no-repeat 50% 50% / 45px 45px;
   transform: rotate(90deg);
   width: 45px;
   height: 45px;
@@ -312,7 +312,7 @@ html {
   background-color: #dff5b0;
 }
 .footer-background {
-  background-image: url(/assets/images/footer/footer.png);
+  background-image: url(../../../assets/images/footer/footer.png);
   position: absolute;
   height: 323px;
   width: 100%;

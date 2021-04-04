@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'Roboto';
-  src: url(/fonts/Roboto/Roboto-Regular.ttf);
+  src: url(../../fonts/Roboto/Roboto-Regular.ttf);
   font-family: 'SceneW01-Black';
-  src: url(/fonts/SceneW01-Black.ttf);
+  src: url(../../fonts/SceneW01-Black.ttf);
 }
 html {
   box-sizing: border-box;
@@ -22,7 +22,7 @@ html {
 
 /* Hero background */
 .hero {
-  background-image: url(/assets/images/hero/hero.png), radial-gradient(71.89% 152.21% at 40.1% 50%, #b5e6ff 0%, #59c3fb 100%);
+  background-image: url(../../assets/images/hero/hero.png), radial-gradient(71.89% 152.21% at 40.1% 50%, #b5e6ff 0%, #59c3fb 100%);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -139,7 +139,7 @@ html {
   max-width: 1370px;
   width: 100%;
   margin: 0 auto;
-  background-image: url(/assets/images/pets-parallax/background.png);
+  background-image: url(../../assets/images/pets-parallax/background.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -323,7 +323,7 @@ margin-bottom: 125px;
   line-height: 19px;
 }
 .person-donation::before {
-  content: url(/assets/icons/pay/money.svg);
+  content: url(../../assets/icons/pay/money.svg);
 }
 .person-donation {
   font-weight: 500;
@@ -352,7 +352,7 @@ margin-bottom: 125px;
   background-color: #dff5b0;
 }
 .footer-background {
-  background-image: url(/assets/images/footer/footer.png);
+  background-image: url(../../assets/images/footer/footer.png);
   position: absolute;
   height: 323px;
   width: 100%;
