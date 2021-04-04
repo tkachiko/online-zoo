@@ -252,6 +252,10 @@ html {
 .map__icon-container:hover {
   box-shadow: 0 0 0 4px #74d40d, 0 0 13px #74d40d;
 }
+.map__mark,
+.map__location {
+  pointer-events: none;
+}
 .text {
   font-size: 16px;
   line-height: 19px;
