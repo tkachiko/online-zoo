@@ -360,7 +360,7 @@ margin-bottom: 125px;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.footer-links {
+.footer-content {
   padding-top: 5px;
   display: flex;
   justify-content: space-between;
@@ -378,6 +378,12 @@ margin-bottom: 125px;
 .button--donate {
   width: 230px;
   padding: 15px;
+}
+.footer-links__links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 570px;
+  width: 100%;
 }
 .footer-menu {
   display: grid;
