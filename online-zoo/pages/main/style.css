@@ -1,6 +1,14 @@
 @font-face {
   font-family: 'Roboto';
   src: url(../../fonts/Roboto/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url(../../fonts/Roboto/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
   font-family: 'SceneW01-Black';
   src: url(../../fonts/SceneW01-Black.ttf);
 }
@@ -15,7 +23,7 @@ html {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   color: #000;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
 }
@@ -32,7 +40,7 @@ html {
   position: absolute;
   width: 100%;
 }
-.heading--hidden {
+.header__heading--hidden {
   visibility: hidden;
   position: absolute;
 }
@@ -65,10 +73,13 @@ html {
 }
 .menu__link {
   text-decoration: none;
+  font-weight: 500;
+}
+.menu__link--footer {
+  font-weight: 400;
 }
 .menu__link:hover {
-  border-bottom-style: outset;
-  border-color: #70cb0e;
+  text-shadow: #70cb0e 0 0 2px, #70cb0e 0 0 2px, #70cb0e 0 0 2px, #70cb0e 0 0 2px;
 }
 .menu__link--active {
   pointer-events: none;
@@ -78,8 +89,8 @@ html {
 /* Watch you favourite animal block */
 .watch-your-favourite-animal__content {
   width: 570px;
-    padding-top: 210px;
-    padding-bottom: 135px;
+  padding-top: 210px;
+  padding-bottom: 135px;
 }
 .hero-heading {
   font-family: 'SceneW01-Black', sans-serif;
@@ -104,7 +115,7 @@ html {
   padding: 15px;
 }
 .button:hover {
- opacity: 80%;
+  opacity: 80%;
 }
 .button:active {
   background: #5eac0b;
@@ -123,6 +134,7 @@ html {
   font-size: 40px;
   line-height: 50px;
   letter-spacing: 0.6px;
+  font-weight: 500;
 }
 .heading::first-letter {
   text-transform: capitalize;
@@ -141,7 +153,7 @@ html {
   margin: 0 auto;
   background-image: url(../../assets/images/pets-parallax/background.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
 }
 .pets {
   display: flex;
@@ -194,7 +206,7 @@ html {
 
 /* Pets in zoo block */
 .slider-box__wrapper {
-padding-top: 60px;
+  padding-top: 60px;
 }
 .slider-box {
   display: flex;
@@ -271,7 +283,7 @@ padding-top: 60px;
 }
 .arrow-icon {
   position: absolute;
-  transform: matrix(1, 0, 0, 1, 240, -195);
+  transform: matrix(1, 0, 0, 1, 212, -192);
 }
 .icon__caption {
   line-height: 19px;
@@ -284,8 +296,8 @@ padding-top: 60px;
 
 /* Testimonials block */
 .feedback-slider-box_wrapper {
-padding-top: 80px;
-margin-bottom: 125px;
+  padding-top: 80px;
+  margin-bottom: 125px;
 }
 .feedback-slider-box {
   display: flex;
@@ -318,14 +330,17 @@ margin-bottom: 125px;
 }
 .person-name {
   width: 130px;
-  font-weight: 550;
+  font-weight: 500;
   font-size: 16px;
   line-height: 19px;
 }
 .person-donation::before {
   content: url(../../assets/icons/pay/money.svg);
+  margin-right: 3px;
 }
 .person-donation {
+  display: flex;
+  align-items: flex-end;
   font-weight: 500;
   font-size: 12px;
   line-height: 19px;
@@ -336,7 +351,7 @@ margin-bottom: 125px;
   line-height: 19px;
 }
 .feedback__button {
- padding-top: 50px;
+  padding-top: 50px;
 }
 .leave-feedback__button {
   margin: 0 auto;
@@ -415,7 +430,7 @@ margin-bottom: 125px;
 .yd-logo {
   cursor: default;
 }
-.footer-copyright{
+.footer-copyright {
   display: flex;
   justify-content: space-between;
   max-width: 790px;

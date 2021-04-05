@@ -1,6 +1,12 @@
 @font-face {
   font-family: 'Roboto';
   src: url(../../fonts/Roboto/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url(../../fonts/Roboto/Roboto-Medium.ttf);
+  font-weight: 500;
 }
 html {
   box-sizing: border-box;
@@ -13,7 +19,7 @@ html {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   color: #000;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
 }
@@ -28,7 +34,7 @@ html {
   position: absolute;
   width: 100%;
 }
-.heading--hidden {
+.header__heading--hidden {
   visibility: hidden;
   position: absolute;
 }
@@ -64,10 +70,13 @@ html {
 }
 .menu__link {
   text-decoration: none;
+  font-weight: 500;
+}
+.menu__link--footer {
+  font-weight: 400;
 }
 .menu__link:hover {
-  border-bottom-style: outset;
-  border-color: #70cb0e;
+  text-shadow: #70cb0e 0 0 2px, #70cb0e 0 0 2px, #70cb0e 0 0 2px, #70cb0e 0 0 2px;
 }
 .menu__link--active {
   pointer-events: none;
@@ -256,7 +265,7 @@ html {
 .map__location {
   pointer-events: none;
 }
-.text {
+.tooltip-location__text {
   font-size: 16px;
   line-height: 19px;
 }

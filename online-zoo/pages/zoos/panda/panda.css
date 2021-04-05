@@ -1,6 +1,12 @@
 @font-face {
   font-family: 'Roboto';
   src: url(../../../fonts/Roboto/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url(../../../fonts/Roboto/Roboto-Medium.ttf);
+  font-weight: 500;
 }
 html {
   box-sizing: border-box;
@@ -13,7 +19,7 @@ html {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   color: #000;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
 }
@@ -23,7 +29,7 @@ html {
   position: absolute;
   width: 100%;
 }
-.heading--hidden {
+.header__heading--hidden {
   visibility: hidden;
   position: absolute;
 }
@@ -59,10 +65,13 @@ html {
 }
 .menu__link {
   text-decoration: none;
+  font-weight: 500;
+}
+.menu__link--footer {
+  font-weight: 400;
 }
 .menu__link:hover {
-  border-bottom-style: outset;
-  border-color: #70cb0e;
+  text-shadow: #70cb0e 0 0 2px, #70cb0e 0 0 2px, #70cb0e 0 0 2px, #70cb0e 0 0 2px;
 }
 .menu__link--active {
   pointer-events: none;
@@ -82,6 +91,7 @@ html {
 }
 .button:hover {
   opacity: 80%;
+  
 }
 .button:active {
   background: #5eac0b;
@@ -90,6 +100,17 @@ html {
 }
 
 /* Main content heading */
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+.main {
+  width: 100%;
+  margin-left: calc(-1160px - 111px);
+}
 .heading-container {
   padding-top: 5%;
 }
@@ -98,6 +119,7 @@ html {
   font-size: 40px;
   line-height: 50px;
   letter-spacing: 0.6px;
+  font-weight: 500;
 }
 .heading::first-letter {
   text-transform: capitalize;
@@ -105,17 +127,17 @@ html {
 
 /* Sidebar */
 .sidebar {
-  max-width: 1920px;
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 100px;
+  position: sticky;
+  top: 0;
+  height: fit-content;
+  margin-bottom: 135px;
+  z-index: 1;
 }
 .sidebar-menu {
   background: url(../../../assets/images/pets-sidebar/sidebar-background.svg) center no-repeat;
-  margin-top: 190px;
+  margin-top: 290px;
   width: 111px;
   height: 380px;
-  position: fixed;
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
@@ -168,7 +190,7 @@ html {
 .tooltip-location::first-letter {
   text-transform: capitalize;
 }
-.sidebar-icon:not(.icon-active):hover .tooltip {
+.sidebar-icon:hover .tooltip {
   visibility: visible;
 }
 .text {
@@ -229,12 +251,17 @@ html {
 .spoiler-details {
   background: #a7e1ff;
   width: 570px;
-  box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   overflow: hidden;
 }
 .spoiler-details1 {
   grid-row: 2;
   grid-column: 1;
+}
+.spoiler-details:not([open]) {
+  height: 61px;
+}
+.spoiler-details[open] {
+  min-height: 142px;
 }
 .spoiler-details2 {
   grid-row: 2;
@@ -375,7 +402,7 @@ html {
 .yd-logo {
   cursor: default;
 }
-.footer-copyright{
+.footer-copyright {
   display: flex;
   justify-content: space-between;
   max-width: 790px;

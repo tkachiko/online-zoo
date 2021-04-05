@@ -1,8 +1,14 @@
 @font-face {
   font-family: 'Roboto';
   src: url(../../fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
   font-family: 'SceneW01-Black';
   src: url(../../fonts/SceneW01-Black.ttf);
+}
+@font-face {
+  font-family: 'BebasNeue-Regular';
+  src: url(../../fonts/Bebas_Neue/BebasNeue-Regular.ttf);
 }
 html {
   box-sizing: border-box;
@@ -14,22 +20,14 @@ html {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  color: #000;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
 }
 .header {
   position: absolute;
   width: 100%;
 }
-.heading--hidden {
+.header__heading--hidden {
   visibility: hidden;
   position: absolute;
-}
-.wrapper {
-  max-width: 1920px;
-  width: 100%;
 }
 .page404 {
   padding-top: 3%;
@@ -41,10 +39,9 @@ html {
 .ooops {
   position: absolute;
   margin-top: 1%;
-  margin-left: 26%;
+  margin-left: 23%;
 }
 .main-heading {
-  font-family: 'SceneW01-Black';
   text-transform: capitalize;
   font-weight: 900;
   font-size: 100px;
@@ -55,10 +52,10 @@ html {
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
-  margin-top: -19%;
+  margin-top: -17%;
 }
 .heading-title {
-  font-size: 45px;
+  font-size: 70px;
   font-weight: bold;
   line-height: 80px;
   text-align: center;
@@ -75,8 +72,18 @@ html {
 .heading-text {
   text-transform: uppercase;
   color: #59c3fb;
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 20px;
+  line-height: 16px;
   font-weight: bold;
   text-align: center;
+}
+.heading-text:hover {
+  opacity: 70%;
+}
+.heading-title,
+.heading-text {
+  font-family: 'BebasNeue-Regular';
+}
+.link {
+  text-decoration: none;
 }
