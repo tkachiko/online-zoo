@@ -115,7 +115,7 @@ html {
   padding: 15px;
 }
 .button:hover {
-  opacity: 80%;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
 }
 .button:active {
   background: #5eac0b;
@@ -133,7 +133,6 @@ html {
   text-align: center;
   font-size: 40px;
   line-height: 50px;
-  letter-spacing: 0.6px;
   font-weight: 500;
 }
 .heading::first-letter {
@@ -157,9 +156,10 @@ html {
 }
 .pets {
   display: flex;
+  flex: 0 0 100%;
   list-style: none;
   padding-top: 200px;
-  padding-bottom: 20px;
+  padding-bottom: 1.4em;
   align-items: center;
   transform: matrix(1, 0, 0, 1, 0, -75);
 }
@@ -169,23 +169,28 @@ html {
 }
 .eagle {
   z-index: 0;
-  transform: matrix(1, 0, 0, 1, 0, 0);
+  transform: scale(1);
+  margin-left: calc(18% - 250px); 
 }
 .tiger {
   z-index: 1;
-  transform: matrix(1.13, 0, 0, 1.13, -2, 2);
+  transform: scale(1.13);
+  margin-left: calc(18% - 250px);
 }
 .panda {
   z-index: 2;
-  transform: matrix(1.4, 0, 0, 1.3, 60, 4);
+  transform: scale(1.4, 1.3);
+  margin-left: calc(18% - 185px);
 }
 .monkey {
   z-index: 1;
-  transform: matrix(1.13, 0, 0, 1.13, 124, 2);
+  transform: scale(1.13);
+  margin-left: calc(18% - 185px);
 }
 .elephant {
   z-index: 0;
-  transform: matrix(1, 0, 0, 1, 120, 0);
+  transform: scale(1);
+  margin-left: calc(18% - 250px);
 }
 .pets-images__article {
   margin: 0 auto;
@@ -206,7 +211,7 @@ html {
 
 /* Pets in zoo block */
 .slider-box__wrapper {
-  padding-top: 60px;
+  padding-top: 4.4em;
 }
 .slider-box {
   display: flex;
@@ -217,36 +222,48 @@ html {
   background-color: transparent;
   align-self: center;
   width: 64px;
+  height: 63px;
   outline: none;
+  border-radius: 50%;
   cursor: pointer;
+  overflow: hidden;
 }
 .arrow-left:hover,
 .arrow-right:hover {
-  opacity: 70%;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
 }
 .arrow-left:active,
 .arrow-right:active {
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
 }
+.feedback__slides {
+  display: flex;
+  justify-content: space-between;
+}
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  grid-gap: 30px 20px;
 }
 .card-wrapper {
   position: relative;
   overflow: hidden;
-  transform: scale(0.9);
 }
 .card-wrapper:hover {
-  transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+  transform: matrix(1.05, 0, 0, 1.05, 0, 0);
   -webkit-transition: width 1s, height 1s, background-color 1s, -webkit-transform 1s;
   transition: width 1s, height 1s, background-color 1s, transform 1s;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
 }
 .card {
   text-align: center;
   text-decoration: none;
+}
+.card-image {
+  width: 233px;
+  height: 300px;
 }
 .card-caption {
   position: absolute;
@@ -260,7 +277,7 @@ html {
   line-height: 19px;
 }
 .pets-in-zoo__button {
-  margin-top: 30px;
+  margin-top: 2.4em;
   padding-bottom: 100px;
 }
 .choose-your-favourite__button {
@@ -296,34 +313,38 @@ html {
 
 /* Testimonials block */
 .feedback-slider-box_wrapper {
-  padding-top: 80px;
+  padding-top: 60px;
   margin-bottom: 125px;
 }
 .feedback-slider-box {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1160px;
 }
 .feedback__card-wrapper {
   max-width: 233px;
   height: 369px;
   display: flex;
+  flex: 0 1 auto;
+  margin: 15px 10px;
 }
 .feedback__card {
   width: 100%;
   background-color: #a7e1ff;
-  padding-top: 22px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 22px 20px;
+  margin: 15px 10px;
+  max-width: 233px;
+  min-height: 369px;
+}
+.card-info {
+  margin-bottom: 15px;
 }
 .feedback__card-caption {
   display: inline-block;
   width: 109px;
   height: 37px;
-  padding-left: 8px;
+  padding-left: 5px;
   vertical-align: super;
-  letter-spacing: -1px;
 }
 .person-image {
   border-radius: 50%;
@@ -346,12 +367,11 @@ html {
   line-height: 19px;
 }
 .card-text {
-  padding-top: 18px;
   font-size: 16px;
   line-height: 19px;
 }
 .feedback__button {
-  padding-top: 50px;
+  padding-top: 35px;
 }
 .leave-feedback__button {
   margin: 0 auto;
@@ -376,7 +396,7 @@ html {
   background-size: cover;
 }
 .footer-content {
-  padding-top: 5px;
+  padding-top: 10px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -418,7 +438,7 @@ html {
 .footer-credentials {
   display: flex;
   justify-content: space-between;
-  padding-top: 60px;
+  padding-top: 55px;
 }
 .schools-logo {
   display: flex;
@@ -437,4 +457,37 @@ html {
   width: 100%;
   align-self: flex-end;
   cursor: default;
+}
+
+@media screen and (max-width: 1440px) {
+
+  .eagle {
+    z-index: 0;
+  transform: scale(1);
+  margin-left: calc(22% - 250px); 
+  }
+  .tiger {
+    z-index: 1;
+    transform: scale(1.14);
+    margin-left: calc(16.5% - 250px);
+  }
+  .panda {
+    z-index: 2;
+    transform: scale(1.4, 1.28);
+    margin-left: calc(16.5% - 185px);
+  }
+  .monkey {
+    z-index: 1;
+    transform: scale(1.14);
+    margin-left: calc(16.5% - 185px);
+  }
+  .elephant {
+    z-index: 0;
+    transform: scale(1);
+    margin-left: calc(16.5% - 250px);
+  }
+  .cards {
+    grid-gap: 25px 20px;
+  }
+
 }
