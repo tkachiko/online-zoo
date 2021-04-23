@@ -10,6 +10,7 @@
 }
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 *,
 *::before,
@@ -112,13 +113,16 @@ html {
 }
 .map {
   position: relative;
+  /* overflow: hidden; */
+  margin: 0 calc((100% - 1925px) / 2 - 62px);
 }
 .map-svg {
-  overflow: hidden;
+  /* overflow: hidden; */
   margin: 0 auto;
   display: flex;
   justify-content: center;
   height: 945px;
+  width: 100%;
 }
 .map__icon-container {
   width: 64px;
@@ -129,6 +133,7 @@ html {
 }
 .map__pet {
   position: absolute;
+  border-radius: 50%;
 }
 .map__pet--eagle {
   left: 75px;
@@ -202,8 +207,11 @@ html {
 /* Tooltip */
 .tooltip:not(.tooltip-eagle) {
   visibility: hidden;
+  display: inline-block;
   position: absolute;
-  width: 102px;
+  max-width: 150px;
+  min-width: 112px;
+  padding: 4px 8px;
   height: 47px;
   margin-left: 74px;
   margin-top: -59px;
@@ -213,10 +221,13 @@ html {
 }
 .tooltip-eagle {
   visibility: hidden;
+  display: inline-block;
   position: absolute;
-  width: 102px;
+  max-width: 150px;
+  min-width: 112px;
+  padding: 4px 8px;
   height: 47px;
-  margin-left: -109px;
+  margin-left: -125px;
   margin-top: -53px;
   background-color: #74d40d;
   text-align: center;
@@ -228,7 +239,7 @@ html {
 .tooltip-block--right::before {
   position: absolute;
   content: '';
-  left: -15px;
+  left: -23px;
   bottom: 10px;
   border: 7px solid transparent;
   border-top: 10px solid #74d40d;
@@ -237,8 +248,8 @@ html {
 .tooltip-block--left::before {
   position: absolute;
   content: '';
-  left: 102px;
-  bottom: 10px;
+  left: 110px;
+  bottom: 13px;
   border: 7px solid transparent;
   border-top: 10px solid #74d40d;
   transform: rotate(-90deg);
@@ -248,6 +259,22 @@ html {
 }
 .tooltip-location::first-letter {
   text-transform: capitalize;
+}
+.tooltip__link-block {
+  width: 147px;
+  height: 40px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #ffb600;
+  border-radius: 30px;
+}
+.tooltip__link {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  text-decoration: none;
 }
 .map__pet:hover .tooltip {
   visibility: visible;
@@ -332,7 +359,7 @@ html {
   background-size: cover;
 }
 .footer-content {
-  padding-top: 10px;
+  padding-top: 5px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -345,6 +372,9 @@ html {
 }
 .footer-logo {
   transform: matrix(0.85, 0, 0, 0.85, -9, 0);
+}
+.donate__button--right {
+  display: none;
 }
 .button--donate {
   width: 230px;
@@ -386,7 +416,7 @@ html {
 .yd-logo {
   cursor: default;
 }
-.footer-copyright{
+.footer-copyright {
   display: flex;
   justify-content: space-between;
   max-width: 790px;
@@ -395,8 +425,7 @@ html {
   cursor: default;
 }
 
-@media screen and (max-width: 1440px)  {
-
+@media screen and (max-width: 1440px) {
   .zoom {
     bottom: 100px;
   }
@@ -406,5 +435,113 @@ html {
   .footer-copyright {
     margin-bottom: 5px;
   }
+}
 
+@media screen and (max-width: 980px) {
+  .footer-background {
+    height: 390px;
+  }
+  .footer {
+    height: 359px;
+  }
+  .footer-content {
+    padding: 5px 20px;
+  }
+  .footer-links__logo-button {
+    max-width: 102px;
+    width: 100%;
+  }
+  .donate__button--left {
+    display: none;
+  }
+  .donate__button--right {
+    display: block;
+  }
+  .button--donate {
+    width: 280px;
+  }
+  .footer-menu {
+    row-gap: 16px;
+    column-gap: 50px;
+  }
+  .footer-credentials {
+    flex-wrap: wrap;
+    padding: 45px 20px 0;
+  }
+  .schools-logo {
+    max-width: 360px;
+  }
+  .footer-copyright {
+    padding-top: 45px;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+  }
+  .copyright {
+    order: 2;
+    padding: 10px 0;
+  }
+  .designer {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button--donate {
+    width: 210px;
+  }
+  .footer-links__links {
+    max-width: 447px;
+    width: 100%;
+    padding-top: 2px;
+  }
+  .footer-menu {
+    row-gap: 16px;
+    column-gap: 15px;
+  }
+  .footer-credentials {
+    flex-wrap: wrap;
+    padding: 45px 20px 0;
+  }
+  .schools-logo {
+    max-width: 310px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .header__content {
+    max-width: 590px;
+    padding-top: 10px;
+    padding-left: 18px;
+  }
+  .map {
+    margin: 0 calc((100% - 1925px) / 2 - 62px);
+  }
+  .tooltip:not(.tooltip-eagle),
+  .tooltip-eagle {
+    height: fit-content;
+    max-width: fit-content;
+    margin-left: 80px;
+    margin-top: -80px;
+    z-index: 1;
+  }
+  .tooltip__link-block {
+    display: flex;
+  }
+  .tooltip-link {
+    text-decoration: none;
+  }
+  .tooltip::before {
+    position: absolute;
+    content: '';
+    left: -15px;
+    bottom: 30px;
+    border: 7px solid transparent;
+    border-top: 10px solid #74d40d;
+    transform: rotate(90deg);
+  }
+  .tooltip-block--left::before,
+  .tooltip-block--right::before {
+    display: none;
+  }
 }

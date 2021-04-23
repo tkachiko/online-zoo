@@ -58,24 +58,26 @@
       <section class="how-it-works">
         <div class="how-it-works__container content">
           <h2 class="heading">how it works</h2>
-          <div class="pets-box">
-            <ul class="pets">
-              <li class="image eagle">
-                <img class="pet-image" src="../../assets/images/pets-parallax/eagle.jpg" alt="eagle" />
-              </li>
-              <li class="image tiger">
-                <img class="pet-image" src="../../assets/images/pets-parallax/tiger.jpg" alt="tiger" />
-              </li>
-              <li class="image panda">
-                <img class="pet-image" src="../../assets/images/pets-parallax/panda.jpg" alt="panda" />
-              </li>
-              <li class="image monkey">
-                <img class="pet-image" src="../../assets/images/pets-parallax/monkey.jpg" alt="monkey" />
-              </li>
-              <li class="image elephant">
-                <img class="pet-image" src="../../assets/images/pets-parallax/elephant.jpg" alt="elephant" />
-              </li>
-            </ul>
+          <div class="pets-wrapper">
+            <div class="pets-box">
+              <ul class="pets">
+                <li class="image eagle">
+                  <img class="pet-image" src="../../assets/images/pets-parallax/eagle.jpg" alt="eagle" />
+                </li>
+                <li class="image tiger">
+                  <img class="pet-image" src="../../assets/images/pets-parallax/tiger.jpg" alt="tiger" />
+                </li>
+                <li class="image panda">
+                  <img class="pet-image" src="../../assets/images/pets-parallax/panda.jpg" alt="panda" />
+                </li>
+                <li class="image monkey">
+                  <img class="pet-image" src="../../assets/images/pets-parallax/monkey.jpg" alt="monkey" />
+                </li>
+                <li class="image elephant">
+                  <img class="pet-image" src="../../assets/images/pets-parallax/elephant.jpg" alt="elephant" />
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="pets-images__article">
@@ -83,8 +85,10 @@
             The application Оnline zoo will allow you to watch zoos' and nature reserves' inhabitants in live. Currently, under video-surveillance are pandas in China, eagles on
             Catalina Island (USA), alligators in Florida and gorillas in the Congo. We are expanding our capabilities and soon online you will meet Arctic snowy owl in Alaska,
             Penguin in California, Elephant from South Africa and Polar bear from Canada. You will see unique video-shots at any time of the day. If you liked a pet you watch and
-            you want to please it with a delicious treat, you can pay a donation and the animal will receive a surprise from you during feeding hours. <br />We want to thank you
-            for helping the animals and give you <a class="coupons__text" href="javascript:void(0)">discount coupons</a> from our partners.
+            you want to please it with a delicious treat, you can pay a donation and the animal will receive a surprise from you during feeding hours.
+            <span class="pets-images__text"
+              >We want to thank you for helping the animals and give you <a class="coupons__text" href="javascript:void(0)">discount coupons</a> from our partners.</span
+            >
           </p>
         </div>
       </section>
@@ -196,9 +200,6 @@
               <img class="icon" src="../../assets/icons/pay/card.svg" alt="card" />
               <p class="icon__caption">You can pay for a donation to any animal using your Credit/Debit card</p>
             </div>
-            <div class="arrow-icon">
-              <img class="icon" src="../../assets/icons/pay/arrow.svg" alt="arrow" />
-            </div>
             <div class="icon">
               <img class="icon" src="../../assets/icons/pay/zoo.svg" alt="zoo" />
               <p class="icon__caption">Donations will go to the account of the zoo or nature reserve</p>
@@ -212,7 +213,7 @@
       </section>
       <section class="testimonials">
         <div class="container content">
-          <h2 class="heading">testimonials</h2>
+          <h2 class="heading heading--testimonials">testimonials</h2>
           <div class="feedback-slider-box_wrapper">
             <div class="feedback-slider-box">
               <button class="arrow arrow-left">
@@ -289,27 +290,27 @@
               <a href="../main/index.html">
                 <img class="logo footer-logo" src="../../assets/icons/logo/zoo-logo.svg" alt="zoo-logo" />
               </a>
-              <div class="donate__button">
+              <div class="donate__button donate__button--left">
                 <a class="button button--donate" href="javascript:void(0)">Donate for volunteers</a>
               </div>
             </div>
             <div class="footer-links__links">
-                <nav class="footer-nav">
-                  <ul class="menu footer-menu">
-                    <li class="menu__item footer-menu-item">
-                      <a class="menu__link menu__link--footer" href="./index.html">about</a>
-                    </li>
-                    <li class="menu__item footer-menu-item">
-                      <a class="menu__link menu__link--footer" href="../page-not-found/page-not-found.html">contact us</a>
-                    </li>
-                    <li class="menu__item footer-menu-item">
-                      <a class="menu__link menu__link--footer" href="../map/map.html">map</a>
-                    </li>
-                    <li class="menu__item footer-menu-item">
-                      <a class="menu__link menu__link--footer" href="javascript:void(0)">feedback</a>
-                    </li>
-                  </ul>
-                </nav>
+              <nav class="footer-nav">
+                <ul class="menu footer-menu">
+                  <li class="menu__item footer-menu-item">
+                    <a class="menu__link menu__link--footer" href="./index.html">about</a>
+                  </li>
+                  <li class="menu__item footer-menu-item">
+                    <a class="menu__link menu__link--footer" href="../page-not-found/page-not-found.html">contact us</a>
+                  </li>
+                  <li class="menu__item footer-menu-item">
+                    <a class="menu__link menu__link--footer" href="../map/map.html">map</a>
+                  </li>
+                  <li class="menu__item footer-menu-item">
+                    <a class="menu__link menu__link--footer" href="javascript:void(0)">feedback</a>
+                  </li>
+                </ul>
+              </nav>
               <address class="socials">
                 <ul class="social">
                   <li class="menu__item">
@@ -344,6 +345,9 @@
               <a class="yd-logo" href="javascript:void(0)" title="Yem Digital">
                 <img src="../../assets/icons/logo/yd-logo.svg" alt="" />
               </a>
+            </div>
+            <div class="donate__button donate__button--right">
+              <a class="button button--donate" href="javascript:void(0)">Donate for volunteers</a>
             </div>
             <div class="footer-copyright">
               <div class="copyright">Copyright ©RSSchool and ©Yem Digital 2020 - 2021</div>

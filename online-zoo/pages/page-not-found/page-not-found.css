@@ -30,29 +30,11 @@ html {
   position: absolute;
 }
 .page404 {
-  padding-top: 3%;
-  max-width: 675px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-.ooops {
-  position: absolute;
-  margin-top: 1%;
-  margin-left: 23%;
-}
-.main-heading {
-  text-transform: capitalize;
-  font-weight: 900;
-  font-size: 100px;
-  line-height: 125px;
-  color: #f0f0f0;
-}
-.not-found {
-  max-width: 600px;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: -17%;
+  background-image: url(../../assets/404/404.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 700px;
+  margin: 6% 2% 0 auto;
 }
 .heading-title {
   font-size: 70px;
@@ -60,14 +42,10 @@ html {
   line-height: 80px;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
   color: #333333;
-}
-.text {
-  max-width: 600px;
   width: 100%;
-  margin: 0 auto;
-  margin-top: 2%;
+  position: relative;
+  top: 660px;
 }
 .heading-text {
   text-transform: uppercase;
@@ -76,9 +54,12 @@ html {
   line-height: 16px;
   font-weight: bold;
   text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: 675px;
 }
 .heading-text:hover {
-  opacity: 70%;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
 }
 .heading-title,
 .heading-text {
@@ -86,4 +67,40 @@ html {
 }
 .link {
   text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .page404 {
+    margin: 0 auto;
+    width: 550px;
+    height: 582px;
+    margin-top: 7%;
+    background-size: contain;
+  }
+  .heading-title {
+    top: 610px;
+  }
+  .heading-text {
+    top: 620px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .page404 {
+    margin: 0 auto;
+    width: 260px;
+    height: 296px;
+    margin-top: -24%;
+    background-size: contain;
+  }
+  .heading-title {
+    top: 470px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .heading-text {
+    top: 480px;
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
