@@ -8,6 +8,10 @@
   src: url(../../fonts/Roboto/Roboto-Medium.ttf);
   font-weight: 500;
 }
+@font-face {
+  font-family: 'Rubik';
+  src: url(../../fonts/Rubik/static/Rubik-Regular.ttf);
+}
 html {
   box-sizing: border-box;
   overflow-x: hidden;
@@ -83,6 +87,9 @@ html {
   pointer-events: none;
   text-shadow: #70cb0e 0 0 2px, #70cb0e 0 0 2px, #70cb0e 0 0 2px, #70cb0e 0 0 2px;
 }
+.menu__burger {
+  display: none;
+}
 .button {
   background-color: #70cb0e;
   -webkit-transition: width 1s, height 1s, background-color 1s, -webkit-transform 1s;
@@ -113,11 +120,9 @@ html {
 }
 .map {
   position: relative;
-  /* overflow: hidden; */
   margin: 0 calc((100% - 1925px) / 2 - 62px);
 }
 .map-svg {
-  /* overflow: hidden; */
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -367,7 +372,7 @@ html {
 .footer-links__logo-button {
   display: flex;
   justify-content: space-between;
-  max-width: 430px;
+  max-width: 50px;
   width: 100%;
 }
 .footer-logo {
@@ -514,9 +519,6 @@ html {
     padding-top: 10px;
     padding-left: 18px;
   }
-  .map {
-    margin: 0 calc((100% - 1925px) / 2 - 62px);
-  }
   .tooltip:not(.tooltip-eagle),
   .tooltip-eagle {
     height: fit-content;
@@ -543,5 +545,188 @@ html {
   .tooltip-block--left::before,
   .tooltip-block--right::before {
     display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header__content {
+    padding-left: 10px;
+  }
+  .nav {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    transform: translate(100%, 0px);
+    background-color: #a7e1ff;
+    padding: 40px 30px 30px 30px;
+    transition: all 0.3s ease 0s;
+    overflow: auto;
+  }
+  .nav--active {
+    transform: translate(0px, 0px);
+  }
+  .menu__burger {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 36px;
+    height: 22px;
+    cursor: pointer;
+    right: 10px;
+    top: 18px;
+  }
+  .menu__burger::before,
+  .menu__burger::after {
+    content: '';
+  }
+  .menu__burger::before {
+    top: 0px;
+  }
+  .menu__burger::after {
+    bottom: 0px;
+  }
+  .menu__burger span {
+    top: 10px;
+  }
+  .menu__burger::before,
+  .menu__burger::after,
+  .menu__burger span {
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background: #000;
+    margin: 0 auto;
+  }
+  .menu {
+    flex-flow: column;
+    max-height: 222px;
+    height: 100%;
+  }
+  .menu__item:not(:first-child) {
+    padding-bottom: 20px;
+  }
+  .menu__link {
+    font-family: 'Rubik';
+    font-size: 22px;
+    line-height: 28.6px;
+  }
+  .menu__item--cross {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 25px;
+  }
+  .menu__item--cross:after {
+    content: '';
+    height: 40px;
+    border-left: 1px solid #000;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 28px;
+  }
+  .menu__item--cross:before {
+    content: '';
+    height: 40px;
+    border-left: 1px solid #000;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 28px;
+  }
+  .map {
+    margin-left: -640px;
+    transform: scale(0.8);
+  }
+  .footer-background {
+    height: 816px;
+    background-size: inherit;
+  }
+  .footer {
+    height: calc(100vh + 85px);
+  }
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-links__logo-button {
+    align-self: center;
+  }
+  .footer-links__links {
+    flex-flow: column;
+  }
+  .footer-nav {
+    padding-top: 37px;
+  }
+  .footer-menu {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 36px);
+    grid-row-gap: 0px;
+  }
+  .footer-menu-item:nth-child(2) {
+    grid-row: 3;
+  }
+  .footer-menu-item:nth-child(3) {
+    grid-row: 2;
+  }
+  .menu__link--footer {
+    font-family: 'Roboto';
+    font-size: 18px;
+  }
+  .socials {
+    order: 3;
+    align-self: center;
+    padding-top: 10px;
+  }
+  .footer-credentials {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+  .schools-logo {
+    padding: 0;
+    order: 1;
+    position: relative;
+  }
+  .yd-logo {
+    padding-left: 60px;
+  }
+  .donate__button--right {
+    display: none;
+  }
+  .donate__button--left {
+    display: block;
+    order: 2;
+    width: 213px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  .button--donate {
+    padding: 13px 16.5px;
+  }
+  .footer-copyright {
+    order: 2;
+    padding-top: 58px;
+    padding-left: 5px;
+  }
+  .copyright {
+    order: 2;
+    width: 90%;
+    padding-top: 2px;
+    padding-left: 32px;
+  }
+  .copyright span {
+    display: none;
+  }
+  .designer {
+    order: 1;
+    margin: -13px 60px 8px;
+  }
+  .footer-copy-text {
+    width: 90%;
   }
 }

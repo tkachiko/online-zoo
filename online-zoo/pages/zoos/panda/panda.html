@@ -23,6 +23,9 @@
           <nav class="nav">
             <ul class="menu">
               <li class="menu__item">
+                <div class="menu__item--cross"></div>
+              </li>
+              <li class="menu__item">
                 <a class="menu__link" href="../../main/index.html">about</a>
               </li>
               <li class="menu__item">
@@ -39,6 +42,9 @@
               </li>
             </ul>
           </nav>
+          <div class="menu__burger">
+            <span></span>
+          </div>
         </div>
       </div>
     </header>
@@ -118,7 +124,7 @@
           </li>
         </ul>
         <a class="sidebar-menu__arrow">
-          <img class="arrow-img" src="../../../../assets/icons/buttons/arrow-right.svg" alt="">
+          <img class="arrow-img" src="../../../../assets/icons/buttons/arrow-right.svg" alt="" />
         </a>
       </aside>
       <main class="main content">
@@ -178,6 +184,9 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
+              <div class="feed__button">
+                <a class="button button--feed" href="javascript:void(0)">Feed</a>
+              </div>
             </div>
           </div>
         </div>
@@ -188,45 +197,23 @@
           </div>
           <div class="spoilers">
             <details class="spoiler-details spoiler-details1" open>
-              <summary class="spoiler-summary">
-                <span class="text">population</span>
-              </summary>
-              <div class="spoiler-content">
-                <p class="spoiler-text text">There are only an estimated 1600 pandas in the wild and about 325 in captivity.</p>
-              </div>
+              <summary class="spoiler-summary">population</summary>
+              There are only an estimated 1600 pandas in the wild and about 325 in captivity.
             </details>
             <details class="spoiler-details spoiler-details2" open>
-              <summary class="spoiler-summary">
-                <span class="text">habitat</span>
-              </summary>
-              <div class="spoiler-content">
-                <p class="spoiler-text text">
-                  Bamboo will occasionally «die off» forcing pandas to migrate to other areas to find enough bamboo. Today panda habitat is limited to the mountains in only a few
-                  provinces of southwestern China.
-                </p>
-              </div>
+              <summary class="spoiler-summary">habitat</summary>
+              Bamboo will occasionally «die off» forcing pandas to migrate to other areas to find enough bamboo. Today panda habitat is limited to the mountains in only a few
+              provinces of southwestern China.
             </details>
             <details class="spoiler-details spoiler-details3" open>
-              <summary class="spoiler-summary">
-                <span class="text">nutrition</span>
-              </summary>
-              <div class="spoiler-content">
-                <p class="spoiler-text text">
-                  Bamboo is indispensable for the big panda, 99% of their food is made up of shoots and leaves of the plant. Bamboo does not have a high nutritional value. And to
-                  meet the daily energy requirement, pandas need to eat between 23 and 40 kg of evergreen per day.
-                </p>
-              </div>
+              <summary class="spoiler-summary">nutrition</summary>
+              Bamboo is indispensable for the big panda, 99% of their food is made up of shoots and leaves of the plant. Bamboo does not have a high nutritional value. And to meet
+              the daily energy requirement, pandas need to eat between 23 and 40 kg of evergreen per day.
             </details>
             <details class="spoiler-details spoiler-details4" open>
-              <summary class="spoiler-summary">
-                <span class="text">interesting facts</span>
-              </summary>
-              <div class="spoiler-content">
-                <p class="spoiler-text text">
-                  Pandas are slow moving and spend a considerable amount of time eating (16 — 24 hour period) and sleeping. Giant panda fur is coarse, dense and somewhat oily.
-                  Their coat keeps them warm in the cool moist climate of the mountain forests.
-                </p>
-              </div>
+              <summary class="spoiler-summary">interesting facts</summary>
+              Pandas are slow moving and spend a considerable amount of time eating (16 — 24 hour period) and sleeping. Giant panda fur is coarse, dense and somewhat oily. Their
+              coat keeps them warm in the cool moist climate of the mountain forests.
             </details>
           </div>
         </div>
@@ -240,27 +227,27 @@
               <a href="../../main/index.html">
                 <img class="logo footer-logo" src="../../../assets/icons/logo/zoo-logo.svg" alt="zoo-logo" />
               </a>
+            </div>
+            <div class="footer-links__links">
               <div class="donate__button donate__button--left">
                 <a class="button button--donate" href="javascript:void(0)">Donate for volunteers</a>
               </div>
-            </div>
-            <div class="footer-links__links">
-                <nav class="footer-nav">
-                  <ul class="menu footer-menu">
-                    <li class="menu__item footer-menu-item">
-                      <a class="menu__link menu__link--footer" href="../../main/index.html">about</a>
-                    </li>
-                    <li class="menu__item footer-menu-item">
-                      <a class="menu__link menu__link--footer" href="../../page-not-found/page-not-found.html">contact us</a>
-                    </li>
-                    <li class="menu__item footer-menu-item">
-                      <a class="menu__link menu__link--footer" href="../../../map/map.html">map</a>
-                    </li>
-                    <li class="menu__item footer-menu-item">
-                      <a class="menu__link menu__link--footer" href="javascript:void(0)">feedback</a>
-                    </li>
-                  </ul>
-                </nav>
+              <nav class="footer-nav">
+                <ul class="menu footer-menu">
+                  <li class="menu__item footer-menu-item">
+                    <a class="menu__link menu__link--footer" href="../../main/index.html">about</a>
+                  </li>
+                  <li class="menu__item footer-menu-item">
+                    <a class="menu__link menu__link--footer" href="../../page-not-found/page-not-found.html">contact us</a>
+                  </li>
+                  <li class="menu__item footer-menu-item">
+                    <a class="menu__link menu__link--footer" href="../../../map/map.html">map</a>
+                  </li>
+                  <li class="menu__item footer-menu-item">
+                    <a class="menu__link menu__link--footer" href="javascript:void(0)">feedback</a>
+                  </li>
+                </ul>
+              </nav>
               <address class="socials">
                 <ul class="social">
                   <li class="menu__item">
@@ -300,7 +287,7 @@
               <a class="button button--donate" href="javascript:void(0)">Donate for volunteers</a>
             </div>
             <div class="footer-copyright">
-              <div class="copyright">Copyright ©RSSchool and ©Yem Digital 2020 - 2021</div>
+              <div class="copyright">Copyright ©RSSchool <span class="and">and</span> ©Yem Digital 2020 - 2021</div>
               <div class="designer">Grigoreva Margarita</div>
             </div>
           </div>

@@ -23,6 +23,9 @@
           <nav class="nav">
             <ul class="menu">
               <li class="menu__item">
+                <div class="menu__item--cross"></div>
+              </li>
+              <li class="menu__item">
                 <a class="menu__link menu__link--active" href="javascript:void(0)">about</a>
               </li>
               <li class="menu__item">
@@ -39,6 +42,9 @@
               </li>
             </ul>
           </nav>
+          <div class="menu__burger">
+            <span></span>
+          </div>
         </div>
       </div>
     </header>
@@ -196,16 +202,16 @@
         <div class="container content">
           <h2 class="heading">pay and feed</h2>
           <div class="pay-and-feed__icons">
-            <div class="icon">
-              <img class="icon" src="../../assets/icons/pay/card.svg" alt="card" />
+            <div class="icon icon-card">
+              <img src="../../assets/icons/pay/card.svg" alt="card" />
               <p class="icon__caption">You can pay for a donation to any animal using your Credit/Debit card</p>
             </div>
-            <div class="icon">
-              <img class="icon" src="../../assets/icons/pay/zoo.svg" alt="zoo" />
+            <div class="icon icon-zoo">
+              <img src="../../assets/icons/pay/zoo.svg" alt="zoo" />
               <p class="icon__caption">Donations will go to the account of the zoo or nature reserve</p>
             </div>
-            <div class="icon">
-              <img class="icon" src="../../assets/icons/pay/panda.svg" alt="panda" />
+            <div class="icon icon-panda">
+              <img src="../../assets/icons/pay/panda.svg" alt="panda" />
               <p class="icon__caption">The animal will receive a delicious treat during feeding hours</p>
             </div>
           </div>
@@ -290,11 +296,11 @@
               <a href="../main/index.html">
                 <img class="logo footer-logo" src="../../assets/icons/logo/zoo-logo.svg" alt="zoo-logo" />
               </a>
+            </div>
+            <div class="footer-links__links">
               <div class="donate__button donate__button--left">
                 <a class="button button--donate" href="javascript:void(0)">Donate for volunteers</a>
               </div>
-            </div>
-            <div class="footer-links__links">
               <nav class="footer-nav">
                 <ul class="menu footer-menu">
                   <li class="menu__item footer-menu-item">
@@ -350,12 +356,13 @@
               <a class="button button--donate" href="javascript:void(0)">Donate for volunteers</a>
             </div>
             <div class="footer-copyright">
-              <div class="copyright">Copyright ©RSSchool and ©Yem Digital 2020 - 2021</div>
+              <div class="copyright">Copyright ©RSSchool <span class="and">and</span> ©Yem Digital 2020 - 2021</div>
               <div class="designer">Grigoreva Margarita</div>
             </div>
           </div>
         </div>
       </div>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>
