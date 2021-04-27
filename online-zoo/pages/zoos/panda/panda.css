@@ -10,7 +10,7 @@
 }
 @font-face {
   font-family: 'Rubik';
-  src: url(../../fonts/Rubik/static/Rubik-Regular.ttf);
+  src: url(../../../fonts/Rubik/static/Rubik-Regular.ttf);
 }
 html {
   box-sizing: border-box;
@@ -404,7 +404,7 @@ html {
 .footer-links__links {
   display: flex;
   justify-content: space-between;
-  max-width: 570px;
+  max-width: 962px;
   width: 100%;
 }
 .footer-menu {
@@ -535,6 +535,12 @@ html {
     grid-row: 4;
     grid-column: 1;
   }
+  .footer-links__logo-button {
+    max-width: 200px;
+  }
+  .footer-copyright {
+    max-width: 655px;
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -556,6 +562,9 @@ html {
   .footer-links__logo-button {
     max-width: 102px;
     width: 100%;
+  }
+  .footer-links__links {
+    max-width: 570px;
   }
   .donate__button--left {
     display: none;
@@ -783,16 +792,17 @@ html {
     width: 300px;
   }
   .footer-background {
-    height: 816px;
+    height: 805px;
     background-size: inherit;
   }
   .footer {
-    height: calc(100vh + 85px);
+    height: 742px;
   }
   .footer-content {
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
   .footer-links__logo-button {
     align-self: center;
@@ -833,6 +843,7 @@ html {
     padding: 0;
     order: 1;
     position: relative;
+    max-width: 600px;
   }
   .yd-logo {
     padding-left: 60px;
@@ -868,7 +879,8 @@ html {
     order: 1;
     margin: -13px 60px 8px;
   }
-  .footer-copy-text {
-    width: 90%;
+  .footer-copyright {
+    width: 64%;
+    margin: 0 auto;
   }
 }

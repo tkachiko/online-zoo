@@ -37,6 +37,7 @@ html {
   background-image: url(../../assets/images/hero/hero.png), radial-gradient(71.89% 152.21% at 40.1% 50%, #b5e6ff 0%, #59c3fb 100%);
   background-position: center;
   background-repeat: no-repeat;
+  height: 700px;
 }
 
 /* Header */
@@ -431,7 +432,7 @@ html {
 .footer-links__links {
   display: flex;
   justify-content: space-between;
-  max-width: 570px;
+  max-width: 962px;
   width: 100%;
 }
 .footer-menu {
@@ -560,6 +561,12 @@ html {
   .leave-feedback__button {
     width: 225px;
   }
+  .footer-links__logo-button {
+    max-width: 200px;
+  }
+  .footer-copyright {
+    max-width: 655px;
+  }
 }
 
 @media screen and (max-width: 1030px) {
@@ -590,6 +597,17 @@ html {
     margin: 0 auto;
     margin-top: -43px;
   }
+  .pay-and-feed__icons {
+    display: flex;
+    flex-wrap: wrap;
+   align-items: stretch;
+   background-image: url(../../assets/icons/pay/arrow-circle.svg);
+   padding-top: 90px;
+   justify-content: center;
+   background-position: center;
+   background-position-x: 119px;
+   height: auto;
+  }
   .footer-background {
     height: 383px;
   }
@@ -602,6 +620,9 @@ html {
   .footer-links__logo-button {
     max-width: 102px;
     width: 100%;
+  }
+  .footer-links__links {
+    max-width: 570px;
   }
   .donate__button--left {
     display: none;
@@ -652,17 +673,15 @@ html {
   .monkey {
     transform: translateX(0%) scaleX(1.23) scaleY(1.23);
   }
+
   .pay-and-feed__icons {
     background-image: url(../../assets/icons/pay/arrow-circle.svg);
-    flex-wrap: wrap;
+    flex-flow: wrap;
     padding-top: 90px;
     justify-content: center;
     background-position: center;
     background-position-x: 119px;
-    height: 545px;
-  }
-  .heading--testimonials {
-    padding-top: 232px;
+    height: auto;
   }
   .button--donate {
     width: 210px;
@@ -692,8 +711,9 @@ html {
     padding-left: 18px;
   }
   .hero {
-    height: calc(100vh + 23px);
+    height: 640px;
     background: url(../../assets/images/hero/hero-640.png), radial-gradient(71.89% 152.21% at 40.1% 50%, #b5e6ff 0%, #59c3fb 100%);
+    background-repeat: no-repeat;
   }
   .watch-your-favourite-animal__content {
     max-width: 425px;
@@ -720,13 +740,10 @@ html {
     margin: 0 auto;
     margin-top: -43px;
   }
-}
-
-@media screen and (max-width: 639px) {
   .pay-and-feed__icons {
+    height: auto;
     background-image: none;
     padding-top: 75px;
-    height: calc(100vh + 308px);
   }
   .icon-zoo {
     position: relative;
@@ -743,9 +760,6 @@ html {
   }
   .icon-zoo::before {
     bottom: 260px;
-  }
-  .heading--testimonials {
-    padding-top: 232px;
   }
 }
 
@@ -840,6 +854,7 @@ html {
   }
   .hero {
     background: url(../../assets/images/hero/hero-320.png), radial-gradient(71.89% 152.21% at 40.1% 50%, #b5e6ff 0%, #59c3fb 100%);
+    background-repeat: no-repeat;
   }
   .watch-your-favourite-animal__content {
     max-width: 220px;
@@ -931,16 +946,17 @@ html {
     padding-top: 50px;
   }
   .footer-background {
-    height: 816px;
+    height: 780px;
     background-size: inherit;
   }
   .footer {
-    height: calc(100vh + 85px);
+    height: 742px;
   }
   .footer-content {
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
   .footer-links__logo-button {
     align-self: center;
@@ -981,6 +997,7 @@ html {
     padding: 0;
     order: 1;
     position: relative;
+    max-width: 600px;
   }
   .yd-logo {
     padding-left: 60px;
@@ -1016,7 +1033,8 @@ html {
     order: 1;
     margin: -13px 60px 8px;
   }
-  .footer-copy-text {
-    width: 90%;
+  .footer-copyright {
+    width: 64%;
+    margin: 0 auto;
   }
 }
