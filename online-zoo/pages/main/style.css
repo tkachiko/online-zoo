@@ -240,18 +240,18 @@ html {
   flex-direction: column;
   height: 630px;
   margin-top: 4.4em;
+  position: relative;
 }
 .slider-box__wrapper {
   width: 100%;
-  max-width: 992px;
-  position: relative;
+  position: absolute;
+  text-align: center;
 }
 .slider-box {
   display: flex;
-  justify-content: space-between;
-  overflow: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 .arrow {
   border: none;
@@ -264,6 +264,9 @@ html {
   cursor: pointer;
   overflow: hidden;
   position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 13%;
 }
 #arrow-prev {
   top: 50%;
@@ -289,6 +292,16 @@ html {
   justify-content: space-between;
 }
 .cards {
+  position: relative;
+  animation: 0.5s ease-in-out;
+  display: none;
+  grid-column-gap: 20px;
+}
+.cards::-webkit-scrollbar {
+  height: 0;
+}
+.active,
+.next {
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: auto auto;
@@ -298,14 +311,49 @@ html {
   margin: auto;
   box-sizing: border-box;
 }
-.cards::-webkit-scrollbar {
-  height: 0;
+.next {
+  position: absolute;
+  top: 0;
+  width: 85%;
+}
+.to-left {
+  animation-name: left;
+}
+.from-right {
+  animation-name: right;
+}
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
 }
 .card-wrapper {
   position: relative;
   overflow: hidden;
   width: 233px;
   height: 300px;
+  list-style: none;
 }
 .card-wrapper:hover {
   transform: matrix(1.05, 0, 0, 1.05, 0, 0);

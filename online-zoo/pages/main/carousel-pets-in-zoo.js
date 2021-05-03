@@ -1,79 +1,156 @@
-const gap = 20;
+let items = document.querySelectorAll('.slider-box .cards');
+let currentItem = 0;
+let isEnabled = true;
 
-const carousel = document.querySelector('.slider-box'),
-  content = document.querySelectorAll('.cards'),
-  next = document.getElementById('arrow-prev'),
-  prev = document.getElementById('arrow-next');
+function changeCurrentItem(n) {
+  currentItem = (n + items.length) % items.length;
+}
 
-let slideType = 'all';
-let slideIndex = 0;
-let slideCoefficient = 8;
+function hideItem(direction) {
+  isEnabled = false;
+  items[currentItem].classList.add(direction);
+  items[currentItem].addEventListener('animationend', function () {
+    this.classList.remove('active', direction);
+  });
+}
 
-let width = carousel.offsetWidth;
-let imgWidth = document.querySelector('img').offsetWidth;
-window.addEventListener('resize', e => {
-  width = carousel.offsetWidth;
-  imgWidth = document.querySelector('img').offsetWidth;
-});
+function showItem(direction) {
+  items[currentItem].classList.add('next', direction);
+  items[currentItem].addEventListener('animationend', function () {
+    this.classList.remove('next', direction);
+    this.classList.add('active');
+    isEnabled = true;
+  });
+}
 
-next.addEventListener('click', e => {
-  delayAutoSliding();
+function nextItem(n) {
+  hideItem('to-left');
+  changeCurrentItem(n + 1);
+  showItem('from-right');
+}
 
-  slideIndex += slideType === 'all' ? slideCoefficient : 1;
+function previousItem(n) {
+  hideItem('to-right');
+  changeCurrentItem(n - 1);
+  showItem('from-left');
+}
 
-  carousel.scrollTo((imgWidth + gap) * slideIndex, 0);
-  if (slideIndex > 0) {
-    prev.style.display = 'flex';
-  }
-  if (slideIndex >= 8) {
-    next.style.display = 'none';
-  }
-});
-
-prev.addEventListener('click', e => {
-  delayAutoSliding();
-
-  slideIndex -= slideType === 'all' ? slideCoefficient : 1;
-
-  carousel.scrollTo((imgWidth + gap) * slideIndex, 0);
-  if (slideIndex < 16) {
-    next.style.display = 'flex';
-  }
-  if (slideIndex <= 0) {
-    prev.style.display = 'none';
+document.querySelector('.control.left').addEventListener('click', function () {
+  if (isEnabled) {
+    previousItem(currentItem);
   }
 });
 
-const slideFunc = () => {
-  slideIndex += slideType === 'all' ? slideCoefficient : 1;
-  if (slideIndex > 0) {
-    prev.style.display = 'flex';
+document.querySelector('.control.right').addEventListener('click', function () {
+  if (isEnabled) {
+    nextItem(currentItem);
   }
-  if (slideIndex >= 8) {
-    next.style.display = 'none';
-  }
-  if (slideIndex > 8) {
-    if (!(slideIndex < 16)) {
-      slideIndex = 0;
-    }
-    prev.style.display = 'none';
-    next.style.display = 'flex';
-  }
-  carousel.scrollTo((imgWidth + gap) * slideIndex, 0);
+});
+
+const swipedetect = el => {
+  let surface = el;
+  let startX = 0;
+  let startY = 0;
+  let distX = 0;
+  let distY = 0;
+  let startTime = 0;
+  let elapsedTime = 0;
+
+  let threshold = 150;
+  let restraint = 100;
+  let allowedTime = 300;
+
+  surface.addEventListener(
+    'mousedown',
+    function (e) {
+      startX = e.pageX;
+      startY = e.pageY;
+      startTime = new Date().getTime();
+      e.preventDefault();
+    },
+    false
+  );
+
+  surface.addEventListener(
+    'mouseup',
+    function (e) {
+      distX = e.pageX - startX;
+      distY = e.pageY - startY;
+      elapsedTime = new Date().getTime() - startTime;
+      if (elapsedTime <= allowedTime) {
+        if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+          if (distX > 0) {
+            if (isEnabled) {
+              previousItem(currentItem);
+            }
+          } else {
+            if (isEnabled) {
+              nextItem(currentItem);
+            }
+          }
+        }
+      }
+      e.preventDefault();
+    },
+    false
+  );
+
+  surface.addEventListener(
+    'touchstart',
+    function (e) {
+      if (e.target.classList.contains('arrow') || e.target.classList.contains('control')) {
+        if (e.target.classList.contains('arrow-left')) {
+          if (isEnabled) {
+            previousItem(currentItem);
+          }
+        } else {
+          if (isEnabled) {
+            nextItem(currentItem);
+          }
+        }
+      }
+      var touchobj = e.changedTouches[0];
+      startX = touchobj.pageX;
+      startY = touchobj.pageY;
+      startTime = new Date().getTime();
+      e.preventDefault();
+    },
+    false
+  );
+
+  surface.addEventListener(
+    'touchmove',
+    function (e) {
+      e.preventDefault();
+    },
+    false
+  );
+
+  surface.addEventListener(
+    'touchend',
+    function (e) {
+      var touchobj = e.changedTouches[0];
+      distX = touchobj.pageX - startX;
+      distY = touchobj.pageY - startY;
+      elapsedTime = new Date().getTime() - startTime;
+      if (elapsedTime <= allowedTime) {
+        if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+          if (distX > 0) {
+            if (isEnabled) {
+              previousItem(currentItem);
+            }
+          } else {
+            if (isEnabled) {
+              nextItem(currentItem);
+            }
+          }
+        }
+      }
+      e.preventDefault();
+    },
+    false
+  );
 };
 
-let autoSlideInterval = setInterval(slideFunc, 3000);
-let autoSlideTimeout = null;
-
-const delayAutoSliding = () => {
-  clearTimeout(autoSlideTimeout);
-  clearInterval(autoSlideInterval);
-  autoSlideInterval = null;
-
-  autoSlideTimeout = setTimeout(() => {
-    clearInterval(autoSlideInterval);
-    autoSlideInterval = setInterval(slideFunc, 3000);
-  }, 6000);
-};
-
-carousel.addEventListener('click', delayAutoSliding);
+var el = document.querySelector('.clider-box-wrapper');
+swipedetect(el);

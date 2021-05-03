@@ -138,7 +138,7 @@
                 class="playlist__item main-item"
                 width="1160"
                 height="653"
-                src="https://www.youtube-nocookie.com/embed/rgXWDk7rh4w?&autoplay=1"
+                src="https://www.youtube-nocookie.com/embed/rgXWDk7rh4w"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -229,7 +229,7 @@
             </div>
             <div class="footer-links__links">
               <div class="donate__button donate__button--left">
-                <a class="button button--donate" href="javascript:void(0)">Donate for volunteers</a>
+                <button class="button button--donate" id="button-donate">Donate for volunteers</button>
               </div>
               <nav class="footer-nav">
                 <ul class="menu footer-menu">
@@ -283,7 +283,7 @@
               </a>
             </div>
             <div class="donate__button donate__button--right">
-              <a class="button button--donate" href="javascript:void(0)">Donate for volunteers</a>
+              <button class="button button--donate" id="button-donate-right">Donate for volunteers</button>
             </div>
             <div class="footer-copyright">
               <div class="copyright">Copyright ©RSSchool <span class="and">and</span> ©Yem Digital 2020 - 2021</div>
@@ -293,6 +293,56 @@
         </div>
       </div>
     </footer>
-    <script src="gorilla.js"></script>
+    <div class="form-donate hidden" id="form-donate">
+      <div class="form-feedback--cross"></div>
+      <form class="form-donate-content" action="">
+        <select name="animal-list" id="animal-list">
+          <option value="alligator">Gorilla</option>
+          <option value="gorilla">Alligator</option>
+          <option value="panda">Panda</option>
+          <option value="eagle">Eagle</option>
+        </select>
+        <input type="number" min="1" max="9999" class="input" placeholder="Amount" id="amount" required />
+        <select name="currency" id="currency">
+          <option value="usd">USD</option>
+          <option value="eur">EUR</option>
+        </select>
+        <textarea id="text-donate" class="textarea textarea-donate" maxlength="280" placeholder="Your text here"></textarea>
+        <button class="button invalid" id="next" type="button">Next</button>
+      </form>
+    </div>
+    <div class="form-pay hidden" id="form-pay">
+      <div class="form-feedback--cross"></div>
+      <form class="form-pay-content" action="">
+        <div class="form-background-card">
+          <div class="card-number">
+            <input type="tel" pattern="\d*" maxlength="19" class="input" placeholder="Card Number" id="card-number" required />
+          </div>
+          <div class="card-month">
+            <input type="tel" pattern="\d*" maxlength="2" class="input" placeholder="MM" id="card-month" required />
+          </div>
+          <div class="card-year">
+            <input type="tel" pattern="\d*" maxlength="2" class="input" placeholder="YY" id="card-year" required />
+          </div>
+          <div class="cardholder-name">
+            <input type="text" class="input" placeholder="Cardholder Name" id="cadholder-name" required />
+          </div>
+        </div>
+        <div class="form-background-card-back">
+          <div class="cvc">
+            <div class="cvc-background--bold-stripe"></div>
+            <div class="cvc-background--thin-stripe thin-stripe-1"></div>
+            <div class="cvc-background--thin-stripe thin-stripe-2"></div>
+            <div class="cvc-background--thin-stripe thin-stripe-3"></div>
+            <div class="cvc-background--thin-stripe thin-stripe-4"></div>
+            <input type="tel" pattern="\d*" maxlength="3" placeholder="CVC" name="cvc" id="cvc" />
+          </div>
+        </div>
+        <button class="button invalid" id="pay" type="submit">Donate</button>
+      </form>
+    </div>
+    <div class="cover hidden" id="cover"></div>
+    <script src="./gorilla.js"></script>
+    <script src="./pop-up.js"></script>
   </body>
 </html>
