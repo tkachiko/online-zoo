@@ -1,4 +1,3 @@
-// const state = {};
 const carouselList = document.querySelector('.carousel__list');
 const carouselItems = document.querySelectorAll('.carousel__item');
 const elems = Array.from(carouselItems);
