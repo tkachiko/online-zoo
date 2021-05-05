@@ -517,8 +517,8 @@ html {
   justify-content: center;
   position: fixed;
   z-index: 100;
-  top: calc(50vh - 320px);
-  left: calc(50vw - 240px);
+  top: calc(50vh - 220px);
+  left: calc(50vw - 340px);
   background-color: #fff;
 }
 .form-feedback--cross {
@@ -584,8 +584,8 @@ textarea {
   justify-content: center;
   position: fixed;
   z-index: 100;
-  top: calc(50vh - 320px);
-  left: calc(50vw - 240px);
+  top: calc(50vh - 220px);
+  left: calc(50vw - 340px);
   background-color: #fff;
 }
 .form-donate-content {
@@ -622,8 +622,8 @@ textarea {
   justify-content: center;
   position: fixed;
   z-index: 100;
-  top: calc(50vh - 320px);
-  left: calc(50vw - 240px);
+  top: calc(50vh - 220px);
+  left: calc(50vw - 340px);
   background-color: #fff;
 }
 .form-background-card {
