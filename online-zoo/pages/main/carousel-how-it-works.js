@@ -8,26 +8,26 @@ carouselList.addEventListener('click', function (event) {
 
   if (!isItem || newActive.classList.contains('carousel__item--active')) {
     return;
-  };
-  
+  }
+
   update(newActive);
 });
 
-const update = function(newActive) {
+const update = function (newActive) {
   const newActivePos = newActive.parentElement.dataset.pos;
 
-  const current = elems.find((elem) => elem.dataset.pos == 0);
-  const prev = elems.find((elem) => elem.dataset.pos == -1);
-  const next = elems.find((elem) => elem.dataset.pos == 1);
-  const first = elems.find((elem) => elem.dataset.pos == -2);
-  const last = elems.find((elem) => elem.dataset.pos == 2);
-  
+  const current = elems.find(elem => elem.dataset.pos == 0);
+  const prev = elems.find(elem => elem.dataset.pos == -1);
+  const next = elems.find(elem => elem.dataset.pos == 1);
+  const first = elems.find(elem => elem.dataset.pos == -2);
+  const last = elems.find(elem => elem.dataset.pos == 2);
+
   current.classList.remove('carousel__item--active');
-  
+
   [current, prev, next, first, last].forEach(item => {
     let itemPos = item.dataset.pos;
 
-    item.dataset.pos = getPos(itemPos, newActivePos)
+    item.dataset.pos = getPos(itemPos, newActivePos);
   });
 };
 
@@ -35,8 +35,8 @@ const getPos = function (current, active) {
   const diff = current - active;
 
   if (Math.abs(current - active) > 2) {
-    return -current
+    return -current;
   }
 
   return diff;
-}
+};
