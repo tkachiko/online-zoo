@@ -31,12 +31,12 @@ const update = function (newActive) {
   });
 };
 
-const getPos = function (current, active) {
+function getPos(current, active) {
   const diff = current - active;
 
-  if (Math.abs(current - active) > 2) {
-    return -current;
+  if (Math.abs(diff) > 2) {
+    return diff > 0 ? diff - carouselItems.length : diff + carouselItems.length;
   }
 
   return diff;
-};
+}
